@@ -54,6 +54,37 @@ $app->get('/admin/logout',function(){
 	User::logout();
 });
 
+$app->get('/admin/users',function(){
+
+	User::verifyLogin();
+
+	$page = new PageAdmin();
+
+	$page->setTpl("user");
+
+});
+
+$app->get('/admin/users/create',function(){
+	
+	User::verifyLogin();
+
+	$page = new PageAdmin();
+
+	$page->setTpl("user-create");
+
+});
+
+$app->get('/admin/users/:idUser',function($idUser){
+	
+	User::verifyLogin();
+
+	$page = new PageAdmin();
+
+	$page->setTpl("user-update");
+
+});
+
+
 $app->run();
 
 ?>
