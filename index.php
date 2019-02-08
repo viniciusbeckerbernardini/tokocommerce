@@ -126,7 +126,7 @@
  	$page->setTpl(
  		"users-update",
  		array(
- 		"user"=>$user->getValues()
+ 			"user"=>$user->getValues()
  		));
 
  });
@@ -136,8 +136,8 @@
  	User::verifyLogin();
 
  	$_POST['inadmin'] = (isset($_POST['inadmin']))? 1 :  0;
-	
-	$user = new User();
+
+ 	$user = new User();
 
  	$user->get((int)$iduser);
 
@@ -148,6 +148,26 @@
  	header("Location: /admin/users");
  	exit;
 
+ });
+
+
+ $app->get("/admin/forgot",function(){
+
+ 	$page = new PageAdmin([
+ 		"header"=>false,
+ 		"footer"=>false
+ 	]);
+
+ 	$page->setTpl("forgot");
+
+ });
+
+
+ $app->post("/admin/forgot",function(){
+
+ 	$post = filter_input(INPUT_POST, "email");
+ 	
+ 	$user = User::getForgotten($post);
  });
 
 
