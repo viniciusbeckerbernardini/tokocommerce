@@ -5,9 +5,11 @@ namespace Hcode\Model;
 use \Hcode\DB\Sql;
 use \Hcode\Model;
 
+
 class User extends Model{
 
 	const SESSION = "User";
+	const SECRET = "php7openssl";
 
 	public static function login($login, $password)
 	{
@@ -133,7 +135,7 @@ class User extends Model{
 	public static function getForgotten($email)
 	{
 		$sql = new Sql();
-		$results = $sql->select("
+		$query = $sql->select("
 			SELECT * FROM tb_persons a 
 			INNER JOIN tb_users b USING(idperson)
 			WHERE a.desemail = :EMAIL
@@ -142,7 +144,11 @@ class User extends Model{
 			]
 		);
 
-		if(count($results === 0))
+		$results = $query;
+
+		// print_r($results);
+
+		if(empty($results))
 		{
 			throw new \Exception("Não possível recuperar a senha, cuzão", 1);
 		}
@@ -150,21 +156,38 @@ class User extends Model{
 		{
 			$data = $results[0];
 
-			$resultsRecovery = $sql->select("CALL sp_userpasswordsrecoveries_create(:iduser, :desip)",
-				[
-					":iduser"=>$data['iduser'],
-					":desip"=>$_SERVER['REMOTE_ADDR']
-				]
-			);
-			if(count($resultsRecovery === 0))
+			$recoveryQuery = $sql->select("CALL sp_userspasswordsrecoveries_create(:iduser,:desip)",array(
+				":iduser"=>$data['iduser'],
+				":desip"=>$_SERVER['REMOTE_ADDR']
+			));
+
+			$resultsRecovery = $recoveryQuery;
+
+			// var_dump($resultsRecovery);
+
+			if(empty($resultsRecovery))
 			{
 				throw new \Exception("Não possível recuperar a senha, cuzão", 1);
 			}
 			else
 			{
 				$dataRecovery = $resultsRecovery[0];
+				$cipher = 'aes-128-gcm';
+				if(in_array($cipher, openssl_get_cipher_methods()))
+				{
+					$ivlen = openssl_cipher_iv_length($cipher);
+					$iv = openssl_random_pseudo_bytes($ivlen);
+					$encyptedData = openssl_encrypt($dataRecovery['idrecovery'], $cipher,User::SECRET,$options = 0, $iv, $tag);
 
-				base64_encode(hash_hmac('sha256',$dataRecovery));
+					$link = 'http://ecommerce.local.com/admin/forgot/reset?code=$encyptedData';
+
+					$mailer = new Mailer($data['desemail'],$data['desperson'],"Recuperação de senha", "forgot", ["name"=>$data['desperson'],"link"=>$link]);
+
+					$mailer->send();
+
+					return $data;
+				}
+
 			}
 
 

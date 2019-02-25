@@ -165,9 +165,20 @@
 
  $app->post("/admin/forgot",function(){
 
- 	$post = filter_input(INPUT_POST, "email");
+ 	$email = $_POST["email"];
  	
- 	$user = User::getForgotten($post);
+ 	$user = User::getForgotten($email);
+
+ 	header('Location: /admin/forgot/sent');
+ });
+
+ $app->get("/admin/forgot/sent",function(){
+ 	$page = new PageAdmin([
+ 		"header"=>false,
+ 		"footer"=>false
+ 	]);
+
+ 	$page->setTpl("forgot-sent");
  });
 
 
