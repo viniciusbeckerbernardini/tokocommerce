@@ -4,12 +4,12 @@ namespace Hcode\Model;
 
 use \Hcode\DB\Sql;
 use \Hcode\Model;
-
+use \Hcode\Mailer;
 
 class User extends Model{
 
 	const SESSION = "User";
-	const SECRET = "php7openssl";
+	const SECRET = "php7openssl_2019_";
 
 	public static function login($login, $password)
 	{
@@ -146,8 +146,6 @@ class User extends Model{
 
 		$results = $query;
 
-		// print_r($results);
-
 		if(empty($results))
 		{
 			throw new \Exception("Não possível recuperar a senha, cuzão", 1);
@@ -155,15 +153,11 @@ class User extends Model{
 		else
 		{
 			$data = $results[0];
-
 			$recoveryQuery = $sql->select("CALL sp_userspasswordsrecoveries_create(:iduser,:desip)",array(
 				":iduser"=>$data['iduser'],
 				":desip"=>$_SERVER['REMOTE_ADDR']
 			));
-
 			$resultsRecovery = $recoveryQuery;
-
-			// var_dump($resultsRecovery);
 
 			if(empty($resultsRecovery))
 			{
@@ -179,7 +173,7 @@ class User extends Model{
 					$iv = openssl_random_pseudo_bytes($ivlen);
 					$encyptedData = openssl_encrypt($dataRecovery['idrecovery'], $cipher,User::SECRET,$options = 0, $iv, $tag);
 
-					$link = 'http://ecommerce.local.com/admin/forgot/reset?code=$encyptedData';
+					$link = "http://ecommerce.local.com/admin/forgot/reset?code=$encyptedData";
 
 					$mailer = new Mailer($data['desemail'],$data['desperson'],"Recuperação de senha", "forgot", ["name"=>$data['desperson'],"link"=>$link]);
 
@@ -187,10 +181,7 @@ class User extends Model{
 
 					return $data;
 				}
-
 			}
-
-
 		}
 	}
 }

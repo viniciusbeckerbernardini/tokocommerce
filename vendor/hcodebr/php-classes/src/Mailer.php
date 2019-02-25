@@ -12,11 +12,10 @@ class Mailer{
 
 	private $mail;
 
-	public function __construct($toAdress, $toName, $subject, $template, $data = [])
+	public function __construct($toAdress, $toName, $subject, $tplName, $data = [])
 	{
 		
 		$config = array(
-			"base_url"      => null,
 			"tpl_dir"       => $_SERVER['DOCUMENT_ROOT'].'/view/email/',
 			"cache_dir"     => $_SERVER['DOCUMENT_ROOT']."/view/cache/",
 			"debug"         => false
@@ -42,7 +41,7 @@ class Mailer{
 		// 0 = off (for production use)
 		// 1 = client messages
 		// 2 = client and server messages
-		// $this->mail->SMTPDebug = 0
+		$this->mail->SMTPDebug = 0;
 
 		//Set the hostname of the mail server
 		$this->mail->Host = 'smtp.gmail.com';
@@ -69,7 +68,7 @@ class Mailer{
 		$this->mail->setFrom(Mailer::USERNAME, Mailer::NAME_FROM);
 
 		//Set an alternative reply-to address
-		$this->mail->addReplyTo('vbkmma@gmail.com', 'o vbk');
+		// $this->mail->addReplyTo('vbkmma@gmail.com', 'o vbk');
 
 		//Set who the message is to be sent to
 		$this->mail->addAddress($toAdress, $toName);

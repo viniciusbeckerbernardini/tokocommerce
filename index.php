@@ -165,11 +165,12 @@
 
  $app->post("/admin/forgot",function(){
 
- 	$email = $_POST["email"];
+ 	$email = filter_input(INPUT_POST,'email');
  	
  	$user = User::getForgotten($email);
 
- 	header('Location: /admin/forgot/sent');
+ 	header("Location: /admin/forgot/sent");
+ 	
  });
 
  $app->get("/admin/forgot/sent",function(){
@@ -180,9 +181,6 @@
 
  	$page->setTpl("forgot-sent");
  });
-
-
-
 
  $app->run();
 
