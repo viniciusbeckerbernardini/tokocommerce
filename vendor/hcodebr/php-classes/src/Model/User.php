@@ -166,12 +166,12 @@ class User extends Model{
 			else
 			{
 				$dataRecovery = $resultsRecovery[0];
-				$cipher = 'aes-128-gcm';
+				$cipher = 'aes-128-ecb';
 				if(in_array($cipher, openssl_get_cipher_methods()))
 				{
 					$ivlen = openssl_cipher_iv_length($cipher);
 					$iv = openssl_random_pseudo_bytes($ivlen);
-					$encyptedData = openssl_encrypt($dataRecovery['idrecovery'], $cipher,User::SECRET,$options = 0, $iv, $tag);
+					$encyptedData = base64_encode(openssl_encrypt($dataRecovery['idrecovery'], $cipher,User::SECRET,$options = 0, $iv));
 
 					$link = "http://ecommerce.local.com/admin/forgot/reset?code=$encyptedData";
 
@@ -183,5 +183,59 @@ class User extends Model{
 				}
 			}
 		}
+	}
+
+	public static function validForgotDecrypt($code){
+		
+		$cipher = 'aes-128-ecb';
+		if(in_array($cipher, openssl_get_cipher_methods()))
+		{
+			$ivlen = openssl_cipher_iv_length($cipher);
+			$iv = openssl_random_pseudo_bytes($ivlen);
+			$idrecovery = openssl_decrypt(base64_decode($code), $cipher, User::SECRET,$options = 0,$iv);
+		}
+
+		$sql = new Sql();
+
+		$results = $sql->select("
+			SELECT *
+			FROM tb_userspasswordsrecoveries a 
+			INNER JOIN tb_users b using(iduser)
+			INNER JOIN tb_persons c using(idperson)
+			where 
+			a.idrecovery = :idrecovery
+			and 
+			a.dtrecovery is null
+			and
+			date_add(a.dtregister, interval 1 hour) >= NOW();
+			",
+			[":idrecovery" => $idrecovery
+		]
+	);
+		if(count($results) === 0){
+			throw new \Exception("Não foi possível recuperar a senha.");
+		}else{
+			return $results[0];
+		}
+	}
+
+	public static function setForgotUsed($idrecovery){
+		$sql = new Sql();
+
+		$sql->query("UPDATE tb_userspasswordsrecoveries set dtrecovery = NOW() where idrecovery = :idrecovery",
+			[
+				":idrecovery"=>$idrecovery
+			]);
+	}
+
+	public function setPassword($password){
+		$sql = new Sql();
+
+		$sql->query("UPDATE tb_users SET despassword = :password WHERE iduser = :iduser",
+			[
+				":password"=>$password,
+				":iduser"=>$this->getiduser()
+			]
+		);
 	}
 }
