@@ -1,6 +1,5 @@
- <?php 
-
- session_start();
+<?php
+session_start();
 
  require_once("vendor/autoload.php");
 
@@ -298,6 +297,19 @@
 
  	exit;
 
+ });
+
+ $app->get("/category/:idcategory",function($idcategory){
+ 	$category = new Category();
+ 	$category->get((int)$idcategory);
+
+ 	$page = new Page();
+
+ 	$page->setTpl("category",
+ 		[
+ 		'category'=>$category->getValues(),
+ 		'products'=>[]
+ 	]);
  });
 
  $app->run();
