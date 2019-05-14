@@ -31,31 +31,6 @@ class Category extends Model{
 		}
 	}
 
-	public function update()
-	{
-
-		$sql = new Sql();
-		try {
-			$results = $sql->select("CALL sp_usersupdate_save(:iduser,:desperson, :deslogin, :despassword,:desemail, :nrphone, :inadmin)",
-				array(
-					":iduser"=>$this->getiduser(),
-					":desperson"=>$this->getdesperson(),
-					":deslogin"=>$this->getdeslogin(),
-					":despassword"=>$this->getdespassword(),
-					":desemail"=>$this->getdesemail(),
-					":nrphone"=>$this->getnrphone(),
-					":inadmin"=>$this->getinadmin()
-				));
-
-			$this->setData($results[0]);
-
-			Category::updateFile();
-
-		} catch (Exception $e) {
-			throw new \Exception($e->getMessage());	
-		}
-	}
-
 	public function get($idcategory)
 	{
 		$sql = new Sql();
