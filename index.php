@@ -13,6 +13,7 @@ $app = new Slim();
 
 $app->config('debug', true);
 
+require_once($_SERVER['DOCUMENT_ROOT']."/util/functions.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/routes/site.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/routes/admin.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/routes/admin-users.php");

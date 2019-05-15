@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/res/site/css/bootstrap.min.css">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="/res/site/css/font-awesome.min.css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/res/site/css/owl.carousel.css">
