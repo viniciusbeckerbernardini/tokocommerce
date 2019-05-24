@@ -23,7 +23,8 @@ class Product extends Model{
 		return $list;
 	}
 
-	public function save(){
+	public function save()
+	{
 		$sql = new Sql();
 		try {
 			$results = $sql->select("CALL sp_products_save(:idproduct,:desproduct,:vlprice,:vlwidth,:vlheight,:vllength,:vlweight,:desurl)",
@@ -57,7 +58,8 @@ class Product extends Model{
 		$this->setData($result[0]);
 	}
 
-	public function delete(){
+	public function delete()
+	{
 		$sql = new Sql();
 
 		$sql->query("DELETE FROM tb_products WHERE idproduct =:idproduct",
@@ -67,7 +69,8 @@ class Product extends Model{
 		);
 	}
 
-	public function checkPhoto(){
+	public function checkPhoto()
+	{
 		$path = $_SERVER['DOCUMENT_ROOT'].
 		DIRECTORY_SEPARATOR.
 		'res'.
@@ -132,4 +135,26 @@ class Product extends Model{
 		$this->checkPhoto();
 	}
 
+	public function getFromURL($desurl)
+	{
+		$sql = new Sql();
+
+		$rows = $sql->select("SELECT * FROM tb_products WHERE desurl = :desurl;",
+			[
+				':desurl'=>$desurl
+			]
+		);
+		$this->setData($rows[0]);
+	}
+
+	public function getCategories(){
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM tb_categories a 
+			INNER JOIN tb_categoriesproducts b 
+			ON a.idcategory = b.idcategory 
+			WHERE b.idproduct = :idproduct",
+			[':idproduct'=> $this->getidproduct()]
+		);
+	}
 }
