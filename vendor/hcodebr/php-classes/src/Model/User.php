@@ -11,6 +11,40 @@ class User extends Model{
 	const SESSION = "User";
 	const SECRET = "php7openssl_2019_";
 
+	public static function getFromSession()
+	{
+		$user = new User();
+
+		if (isset($_SESSION[User::SESSION]) && (int)$_SESSION[User::SESSION]['iduser'] > 0){
+			
+			$user->setData($_SESSION[User::SESSION]);
+
+		}
+		return $user;
+
+	}
+
+	public static function checkLogin($inAdmin = true){
+		if(
+			!isset($_SESSION[User::SESSION]) 
+			||
+			!$_SESSION[User::SESSION] 
+			||
+			!(int)$_SESSION[User::SESSION]['iduser'] > 0 
+		){
+			return false;
+		}else{
+			if($inAdmin === true && (bool)$_SESSION[User::SESSION]['inadmin'] === true){
+				return true;
+			}else if( $inAdmin === false){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	}
+
+
 	public static function login($login, $password)
 	{
 		$sql = new Sql();
@@ -45,17 +79,8 @@ class User extends Model{
 
 	public static function verifyLogin($inAdmin = true)
 	{
-		if(
-			!isset($_SESSION[User::SESSION]) 
-			||
-			!$_SESSION[User::SESSION] 
-			||
-			!(int)$_SESSION[User::SESSION]['iduser'] > 0 
-			|| 
-			(bool)$_SESSION[User::SESSION]['inadmin'] !== $inAdmin
-		){
+		if(User::checkLogin($inAdmin)){
 			header("Location: /admin/login");
-
 			exit;
 		}
 	}
