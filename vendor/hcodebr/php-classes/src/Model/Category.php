@@ -76,7 +76,7 @@ class Category extends Model{
 				SELECT * FROM tb_products WHERE idproduct IN(
 				SELECT a.idproduct 
 				FROM tb_products a
-				INNER JOIN tb_categoriesproducts b on a.idproduct = b.idproduct 
+				INNER JOIN tb_productscategories b on a.idproduct = b.idproduct 
 				where b.idcategory = :idcategory
 			);",
 			[
@@ -88,7 +88,7 @@ class Category extends Model{
 				SELECT * FROM tb_products WHERE idproduct NOT IN(
 				SELECT a.idproduct 
 				FROM tb_products a
-				INNER JOIN tb_categoriesproducts b on a.idproduct = b.idproduct 
+				INNER JOIN tb_productscategories b on a.idproduct = b.idproduct 
 				where b.idcategory = :idcategory
 			);",
 			[
@@ -100,7 +100,7 @@ class Category extends Model{
 	public function addProduct(Product $product){
 		$sql = new Sql();
 
-		$sql->query("INSERT INTO tb_categoriesproducts(idcategory, idproduct) VALUES (:idcategory, :idproduct)",
+		$sql->query("INSERT INTO tb_productscategories(idcategory, idproduct) VALUES (:idcategory, :idproduct)",
 			array(
 				":idcategory" => $this->getidcategory(),
 				":idproduct" => $product->getidproduct()
@@ -111,7 +111,7 @@ class Category extends Model{
 	public function removeProduct(Product $product){
 		$sql = new Sql();
 
-		$sql->query("DELETE FROM tb_categoriesproducts WHERE idcategory = :idcategory AND idproduct = :idproduct",
+		$sql->query("DELETE FROM tb_productscategories WHERE idcategory = :idcategory AND idproduct = :idproduct",
 			array(
 				":idcategory" => $this->getidcategory(),
 				":idproduct" => $product->getidproduct()
@@ -128,7 +128,7 @@ class Category extends Model{
 		$results = $sql->select("
 			SELECT SQL_CALC_FOUND_ROWS * 
 			FROM tb_products a
-			INNER JOIN tb_categoriesproducts b ON a.idproduct = b.idproduct
+			INNER JOIN tb_productscategories b ON a.idproduct = b.idproduct
 			INNER JOIN tb_categories c ON c.idcategory = b.idcategory
 			WHERE c.idcategory = :idcategory 
 			LIMIT $start, $itemsPerPage;

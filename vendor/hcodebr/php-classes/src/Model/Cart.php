@@ -12,8 +12,8 @@ class Cart extends Model {
 
 	const SESSION = "Cart";
 
-	public static function getFromSession(){
-		
+	public static function getFromSession()
+	{
 		$cart = new Cart();
 
 		if(isset($_SESSION[Cart::SESSION]) && (int)$_SESSION[Cart::SESSION]['idcart'] > 0 )
@@ -25,7 +25,7 @@ class Cart extends Model {
 
 			if(!(int)$cart->getidcart() > 0 ){
 				$data = [
-					':dessessionid'=>session_id()
+					'dessessionid'=>session_id()
 				];
 
 				if(User::checkLogin(false)){
@@ -42,7 +42,8 @@ class Cart extends Model {
 
 			}
 		}
-		return $data;
+
+		return $cart;
 	}
 
 	public function setToSession()
