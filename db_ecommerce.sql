@@ -218,7 +218,7 @@ CREATE TABLE `tb_cartsproducts` (
   `idcartproduct` int(11) NOT NULL,
   `idcart` int(11) NOT NULL,
   `idproduct` int(11) NOT NULL,
-  `dtremoved` datetime NOT NULL,
+  `dtremoved` datetime NULL,
   `dtregister` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
