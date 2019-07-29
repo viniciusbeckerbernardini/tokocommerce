@@ -10,6 +10,8 @@ class User extends Model{
 
 	const SESSION = "User";
 	const SECRET = "php7openssl_2019_";
+    const SESSION_USER = "UserError";
+    const SESSION_ERROR_USER = "UserErrorRegister";
 
 	public static function getFromSession()
 	{
@@ -24,17 +26,18 @@ class User extends Model{
 
 	}
 
-	public static function checkLogin($inAdmin = true){
+	public static function checkLogin($inAdmin = true)
+    {
 		if(
-			!isset($_SESSION[User::SESSION]) 
+			!isset($_SESSION[User::SESSION])
 			||
-			!$_SESSION[User::SESSION] 
+			!$_SESSION[User::SESSION]
 			||
 			!(int)$_SESSION[User::SESSION]['iduser'] > 0 
 		){
 			return false;
 		}else{
-			if($inAdmin === true && (bool)$_SESSION[User::SESSION]['inadmin'] === true){
+			if($inAdmin === true && (bool)$_SESSION[User::SESSION]['inadmin'] === true){;
 				return true;
 			}else if( $inAdmin === false){
 				return true;
@@ -67,7 +70,9 @@ class User extends Model{
 			$user->setData($data);
 
 			$_SESSION[User::SESSION] = $user->getValues();
-			
+
+
+
 			return $user;
 
 		}
@@ -78,12 +83,18 @@ class User extends Model{
 	}
 
 	public static function verifyLogin($inAdmin = true)
-	{
-		if(User::checkLogin($inAdmin)){
-			header("Location: /admin/login");
-			exit;
-		}
-	}
+    {
+        if (!User::checkLogin($inAdmin)) {
+
+            if ($inAdmin) {
+                header("Location: /admin/login");
+                exit;
+            } else if (!$inAdmin) {
+                header("Location: /login");
+                exit;
+            }
+        }
+    }
 
 	public static function logout()
 	{
@@ -263,4 +274,21 @@ class User extends Model{
 			]
 		);
 	}
+
+    public static function setMsgError(string $msg){
+        $_SESSION[User::SESSION_ERROR_USER] = $msg;
+    }
+
+    public static function getMsgError(){
+        $msg = (isset($_SESSION[User::SESSION_ERROR_USER])) ? $_SESSION[User::SESSION_ERROR_USER] : '';
+
+        User::clearMsgError();
+
+        return $msg;
+    }
+
+    public static function clearMsgError(){
+        unset($_SESSION[User::SESSION_ERROR_USER]);
+    }
+
 }

@@ -1,9 +1,11 @@
 <?php
 
+use Hcode\Model\User;
 use \Hcode\Page;
 use Hcode\Model\Product;
 use Hcode\Model\Category;
 use Hcode\Model\Cart;
+use \Hcode\Model\Address;
 
 $app->get('/', function() {
 
@@ -132,8 +134,45 @@ $app->post('/cart/freight',function(){
 
 });
 
+$app->get("/checkout",function(){
 
+    User::verifyLogin(false);
 
+    $cart = Cart::getFromSession();
+
+    $address = new Address();
+
+    $page = new Page();
+
+    $page->setTpl("checkout",
+        [
+            "cart"=>$cart->getValues(),
+            "address"=>$address->getValues()
+        ]);
+});
+
+$app->get("/login",function(){
+
+    $page = new Page();
+
+    $page->setTpl("login",[
+        "error"=>User::getMsgError()
+    ]);
+});
+
+$app->post("/login",function(){
+    try {
+
+        $login = filter_input(INPUT_POST, 'login');
+        $password = filter_input(INPUT_POST, 'password');
+
+        User::login($login, $password);
+    }catch (Exception $e){
+        User::setMsgError($e->getMessage());
+    }
+    header("Location: /checkout");
+    exit();
+});
 
 
 
