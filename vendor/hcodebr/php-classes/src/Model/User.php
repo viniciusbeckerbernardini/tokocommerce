@@ -52,7 +52,10 @@ class User extends Model{
 	{
 		$sql = new Sql();
 
-		$results = $sql->select("SELECT * FROM tb_users WHERE deslogin = :LOGIN",
+		$results = $sql->select("SELECT * FROM tb_users A 
+                                          INNER JOIN tb_persons B 
+                                          ON A.idperson = B.idperson
+                                          WHERE A.deslogin = :LOGIN",
 			[":LOGIN"=>$login]
 		);
 
@@ -66,6 +69,8 @@ class User extends Model{
 		if(password_verify($password, $data["despassword"]) === true)
 		{
 			$user = new User();
+
+			$data['desperson'] = utf8_encode($data['desperson']);
 
 			$user->setData($data);
 
@@ -99,8 +104,6 @@ class User extends Model{
 	public static function logout()
 	{
 		$_SESSION[User::SESSION] = NULL;
-		header("Location: /admin/login");
-		exit;
 	}
 
 	public static function listAll()
@@ -119,7 +122,7 @@ class User extends Model{
 				array(
 					":desperson"=>$this->getdesperson(),
 					":deslogin"=>$this->getdeslogin(),
-					":despassword"=>$this->getdespassword(),
+					":despassword"=>User::getPasswordHash($this->getdespassword()),
 					":desemail"=>$this->getdesemail(),
 					":nrphone"=>$this->getnrphone(),
 					":inadmin"=>$this->getinadmin()
@@ -149,7 +152,7 @@ class User extends Model{
 					":iduser"=>$this->getiduser(),
 					":desperson"=>$this->getdesperson(),
 					":deslogin"=>$this->getdeslogin(),
-					":despassword"=>$this->getdespassword(),
+					":despassword"=>User::getPasswordHash($this->getdespassword()),
 					":desemail"=>$this->getdesemail(),
 					":nrphone"=>$this->getnrphone(),
 					":inadmin"=>$this->getinadmin()
@@ -289,6 +292,10 @@ class User extends Model{
 
     public static function clearMsgError(){
         unset($_SESSION[User::SESSION_ERROR_USER]);
+    }
+
+    public static function getPasswordHash($password){
+	    return password_hash($password, PASSWORD_DEFAULT, ['cost'=>12]);
     }
 
 }
