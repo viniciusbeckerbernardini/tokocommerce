@@ -14,8 +14,8 @@
 <div class="single-product-area">
     <div class="zigzag-bottom"></div>
     <div class="container">
-        <div class="row">                
-            <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12">
                 <?php if( $error != '' ){ ?>
 
                 <div class="alert alert-danger">
@@ -24,6 +24,8 @@
                 </div>
                 <?php } ?>
 
+            </div>
+            <div class="col-md-6">
                 <form action="/login" id="login-form-wrap" class="login" method="post">
                     <h2>Acessar</h2>
                     <p class="form-row form-row-first">
@@ -57,17 +59,17 @@
                     <p class="form-row form-row-first">
                         <label for="nome">Nome Completo <span class="required">*</span>
                         </label>
-                        <input type="text" id="nome" name="name" class="input-text" value="">
+                        <input type="text" id="nome" name="name" value="<?php echo htmlspecialchars( $registerValues["name"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="input-text" >
                     </p>
                     <p class="form-row form-row-first">
                         <label for="email">E-mail <span class="required">*</span>
                         </label>
-                        <input type="email" id="email" name="email" class="input-text" value="">
+                        <input type="email" id="email" name="email" value="<?php echo htmlspecialchars( $registerValues["email"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="input-text">
                     </p>
                     <p class="form-row form-row-first">
                         <label for="phone">Telefone
                         </label>
-                        <input type="text" id="phone" name="phone" class="input-text" value="">
+                        <input type="text" id="phone" name="phone"  class="input-text" value="<?php echo htmlspecialchars( $registerValues["phone"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
                     </p>
                     <p class="form-row form-row-last">
                         <label for="senha">Senha <span class="required">*</span>
