@@ -10,8 +10,8 @@ class User extends Model{
 
 	const SESSION = "User";
 	const SECRET = "php7openssl_2019_";
-    const SESSION_USER = "UserError";
-    const SESSION_ERROR_USER = "UserErrorRegister";
+	const SESSION_USER = "UserError";
+	const SESSION_ERROR_USER = "UserErrorRegister";
 
 	public static function getFromSession()
 	{
@@ -27,7 +27,7 @@ class User extends Model{
 	}
 
 	public static function checkLogin($inAdmin = true)
-    {
+	{
 		if(
 			!isset($_SESSION[User::SESSION])
 			||
@@ -53,9 +53,9 @@ class User extends Model{
 		$sql = new Sql();
 
 		$results = $sql->select("SELECT * FROM tb_users A 
-                                          INNER JOIN tb_persons B 
-                                          ON A.idperson = B.idperson
-                                          WHERE A.deslogin = :LOGIN",
+			INNER JOIN tb_persons B 
+			ON A.idperson = B.idperson
+			WHERE A.deslogin = :LOGIN",
 			[":LOGIN"=>$login]
 		);
 
@@ -88,18 +88,18 @@ class User extends Model{
 	}
 
 	public static function verifyLogin($inAdmin = true)
-    {
-        if (!User::checkLogin($inAdmin)) {
+	{
+		if (!User::checkLogin($inAdmin)) {
 
-            if ($inAdmin) {
-                header("Location: /admin/login");
-                exit;
-            } else if (!$inAdmin) {
-                header("Location: /login");
-                exit;
-            }
-        }
-    }
+			if ($inAdmin) {
+				header("Location: /admin/login");
+				exit;
+			} else if (!$inAdmin) {
+				header("Location: /login");
+				exit;
+			}
+		}
+	}
 
 	public static function logout()
 	{
@@ -171,7 +171,7 @@ class User extends Model{
 		$sql->query("CALL sp_users_delete(:iduser)", array(":iduser"=>$this->getiduser()));
 	}
 
-	public static function getForgotten($email)
+	public static function getForgotten($email, $inAdmin = true)
 	{
 		$sql = new Sql();
 		$query = $sql->select("
@@ -211,8 +211,12 @@ class User extends Model{
 					$ivlen = openssl_cipher_iv_length($cipher);
 					$iv = openssl_random_pseudo_bytes($ivlen);
 					$encyptedData = base64_encode(openssl_encrypt($dataRecovery['idrecovery'], $cipher,User::SECRET,$options = 0, $iv));
-
-					$link = "http://ecommerce.local.com/admin/forgot/reset?code=$encyptedData";
+					if($inAdmin === true){
+						$link = "http://ecommerce.local.com/admin/forgot/reset?code=$encyptedData";
+					}else if($inAdmin === false){
+						$link = "http://ecommerce.local.com/forgot/reset?code=$encyptedData";
+					}
+					
 
 					$mailer = new Mailer($data['desemail'],$data['desperson'],"Recuperação de senha", "forgot", ["name"=>$data['desperson'],"link"=>$link]);
 
@@ -278,35 +282,35 @@ class User extends Model{
 		);
 	}
 
-    public static function setMsgError(string $msg){
-        $_SESSION[User::SESSION_ERROR_USER] = $msg;
-    }
+	public static function setMsgError(string $msg){
+		$_SESSION[User::SESSION_ERROR_USER] = $msg;
+	}
 
-    public static function getMsgError(){
-        $msg = (isset($_SESSION[User::SESSION_ERROR_USER])) ? $_SESSION[User::SESSION_ERROR_USER] : '';
+	public static function getMsgError(){
+		$msg = (isset($_SESSION[User::SESSION_ERROR_USER])) ? $_SESSION[User::SESSION_ERROR_USER] : '';
 
-        User::clearMsgError();
+		User::clearMsgError();
 
-        return $msg;
-    }
+		return $msg;
+	}
 
-    public static function clearMsgError(){
-        unset($_SESSION[User::SESSION_ERROR_USER]);
-    }
+	public static function clearMsgError(){
+		unset($_SESSION[User::SESSION_ERROR_USER]);
+	}
 
-    public static function getPasswordHash($password){
-	    return password_hash($password, PASSWORD_DEFAULT, ['cost'=>12]);
-    }
+	public static function getPasswordHash($password){
+		return password_hash($password, PASSWORD_DEFAULT, ['cost'=>12]);
+	}
 
-    public static function checkLoginExists(string $login):bool{
-	    $sql = new Sql();
+	public static function checkLoginExists(string $login):bool{
+		$sql = new Sql();
 
-	    $results = $sql->select("SELECT * FROM tb_users WHERE deslogin = :deslogin",
-            [
-               ':deslogin'=>$login
-            ]);
+		$results = $sql->select("SELECT * FROM tb_users WHERE deslogin = :deslogin",
+			[
+				':deslogin'=>$login
+			]);
 
-	    return (count($results) > 0);
-    }
+		return (count($results) > 0);
+	}
 
 }

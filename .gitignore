@@ -1,7 +1,6 @@
-.ideia
-vendor/composer
-vendor/phpmailer
-vendor/phpmailer
-vendor/rain
-vendor/slim
-vendor/autoload
+./.ideia
+./vendor/composer
+./vendor/phpmailer
+./vendor/rain
+./vendor/slim
+./vendor/autoload
