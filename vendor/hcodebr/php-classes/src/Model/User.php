@@ -12,6 +12,7 @@ class User extends Model{
 	const SECRET = "php7openssl_2019_";
 	const SESSION_USER = "UserError";
 	const SESSION_ERROR_USER = "UserErrorRegister";
+	const SESSION_MESSAGE_USER = "UserMessageRegister";
 
 	public static function getFromSession()
 	{
@@ -25,6 +26,11 @@ class User extends Model{
 		return $user;
 
 	}
+
+	public function setToSession(){
+        $_SESSION[User::SESSION] = $this->getValues();
+    }
+
 
 	public static function checkLogin($inAdmin = true)
 	{
@@ -148,15 +154,15 @@ class User extends Model{
 		$sql = new Sql();
 		try {
 			$results = $sql->select("CALL sp_usersupdate_save(:iduser,:desperson, :deslogin, :despassword,:desemail, :nrphone, :inadmin)",
-				array(
-					":iduser"=>$this->getiduser(),
-					":desperson"=>$this->getdesperson(),
-					":deslogin"=>$this->getdeslogin(),
-					":despassword"=>User::getPasswordHash($this->getdespassword()),
-					":desemail"=>$this->getdesemail(),
-					":nrphone"=>$this->getnrphone(),
-					":inadmin"=>$this->getinadmin()
-				));
+                array(
+                    ":iduser"=>$this->getiduser(),
+                    ":desperson"=>$this->getdesperson(),
+                    ":deslogin"=>$this->getdeslogin(),
+                    ":despassword"=>User::getPasswordHash($this->getdespassword()),
+                    ":desemail"=>$this->getdesemail(),
+                    ":nrphone"=>$this->getnrphone(),
+                    ":inadmin"=>$this->getinadmin()
+                ));
 
 			$this->setData($results[0]);
 
@@ -164,6 +170,29 @@ class User extends Model{
 			throw new \Exception($e->getMessage());	
 		}
 	}
+
+    public function updateUserPersonalData()
+    {
+
+        $sql = new Sql();
+        try {
+            $results = $sql->select("UPDATE tb_user",
+                array(
+                    ":iduser"=>$this->getiduser(),
+                    ":desperson"=>$this->getdesperson(),
+                    ":deslogin"=>$this->getdeslogin(),
+                    ":despassword"=>User::getPasswordHash($this->getdespassword()),
+                    ":desemail"=>$this->getdesemail(),
+                    ":nrphone"=>$this->getnrphone(),
+                    ":inadmin"=>$this->getinadmin()
+                ));
+
+            $this->setData($results[0]);
+
+        } catch (Exception $e) {
+            throw new \Exception($e->getMessage());
+        }
+    }
 
 	public function delete()
 	{
@@ -297,6 +326,21 @@ class User extends Model{
 	public static function clearMsgError(){
 		unset($_SESSION[User::SESSION_ERROR_USER]);
 	}
+
+    public static function setMsg(string $msg){
+        $_SESSION[User::SESSION_MESSAGE_USER] = $msg;
+    }
+
+    public static function getMsg(){
+        $msg = (isset($_SESSION[User::SESSION_MESSAGE_USER])) ? $_SESSION[User::SESSION_MESSAGE_USER] : '';
+
+        User::clearMsgError();
+
+        return $msg;
+    }
+    public static function clearMsg(){
+        unset($_SESSION[User::SESSION_MESSAGE_USER]);
+    }
 
 	public static function getPasswordHash($password){
 		return password_hash($password, PASSWORD_DEFAULT, ['cost'=>12]);
