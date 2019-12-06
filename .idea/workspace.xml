@@ -2,118 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fec0642f-b2c2-47b1-bc12-df1efc2dbdae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/cart.f65874fe9a12b67b4e80646e664d1028.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/categories-create.4a470aaae13fb11fa94cef2655bceefa.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/categories-menu.f65874fe9a12b67b4e80646e664d1028.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/categories-products.4a470aaae13fb11fa94cef2655bceefa.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/categories.4a470aaae13fb11fa94cef2655bceefa.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/category.f65874fe9a12b67b4e80646e664d1028.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/checkout.f65874fe9a12b67b4e80646e664d1028.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/footer.4a470aaae13fb11fa94cef2655bceefa.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/footer.f65874fe9a12b67b4e80646e664d1028.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/header.4a470aaae13fb11fa94cef2655bceefa.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/header.f65874fe9a12b67b4e80646e664d1028.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/index.4a470aaae13fb11fa94cef2655bceefa.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/index.f65874fe9a12b67b4e80646e664d1028.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/login.4a470aaae13fb11fa94cef2655bceefa.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/login.f65874fe9a12b67b4e80646e664d1028.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/product-detail.f65874fe9a12b67b4e80646e664d1028.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/products.4a470aaae13fb11fa94cef2655bceefa.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/profile-menu.f65874fe9a12b67b4e80646e664d1028.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/profile.f65874fe9a12b67b4e80646e664d1028.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/users-create.4a470aaae13fb11fa94cef2655bceefa.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/users-update.4a470aaae13fb11fa94cef2655bceefa.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/users.4a470aaae13fb11fa94cef2655bceefa.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/profile-menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tokocommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tokocommerce.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/cache/products-update.4a470aaae13fb11fa94cef2655bceefa.rtpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_ecommerce.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db_ecommerce.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/site/img/products/10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/res/site/img/products/10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/site/img/products/11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/res/site/img/products/11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/site/img/products/12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/res/site/img/products/12.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/site/img/products/13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/res/site/img/products/13.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/site/img/products/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/res/site/img/products/8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/site/img/products/9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/res/site/img/products/9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin-categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin-categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin-products.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin-products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin-users.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin-users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/site/img/products/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/res/site/img/products/1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/site.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/util/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/DB/Sql.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/DB/Sql.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Address.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Address.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/cart.4f1634dad39fa990050fb978a342b179.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/cart.4f1634dad39fa990050fb978a342b179.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/cart.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/cart.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/categories-menu.4f1634dad39fa990050fb978a342b179.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/categories-menu.4f1634dad39fa990050fb978a342b179.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/categories-menu.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/categories-menu.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/categories-products.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/categories-products.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/categories.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/categories.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/categories.d76f31585bc54459a81724760a72d6a0.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/categories.d76f31585bc54459a81724760a72d6a0.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/category.4f1634dad39fa990050fb978a342b179.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/category.4f1634dad39fa990050fb978a342b179.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/checkout.4f1634dad39fa990050fb978a342b179.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/checkout.4f1634dad39fa990050fb978a342b179.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/checkout.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/checkout.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/footer.4f1634dad39fa990050fb978a342b179.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/footer.4f1634dad39fa990050fb978a342b179.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/footer.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/footer.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/footer.d76f31585bc54459a81724760a72d6a0.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/footer.d76f31585bc54459a81724760a72d6a0.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/footer.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/footer.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/forgot-reset-success.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/forgot-reset-success.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/forgot-reset-success.d76f31585bc54459a81724760a72d6a0.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/forgot-reset-success.d76f31585bc54459a81724760a72d6a0.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/forgot-reset-success.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/forgot-reset-success.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/forgot-reset.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/forgot-reset.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/forgot-reset.d76f31585bc54459a81724760a72d6a0.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/forgot-reset.d76f31585bc54459a81724760a72d6a0.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/forgot-reset.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/forgot-reset.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/forgot-sent.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/forgot-sent.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/forgot-sent.d76f31585bc54459a81724760a72d6a0.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/forgot-sent.d76f31585bc54459a81724760a72d6a0.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/forgot-sent.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/forgot-sent.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/forgot.76525ee0e5e513475a8767513e50ce92.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/forgot.76525ee0e5e513475a8767513e50ce92.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/forgot.7f44c49fe72a47f88f2dbc6e7246e3b6.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/forgot.7f44c49fe72a47f88f2dbc6e7246e3b6.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/forgot.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/forgot.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/forgot.d76f31585bc54459a81724760a72d6a0.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/forgot.d76f31585bc54459a81724760a72d6a0.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/forgot.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/forgot.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/header.4f1634dad39fa990050fb978a342b179.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/header.4f1634dad39fa990050fb978a342b179.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/header.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/header.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/header.d76f31585bc54459a81724760a72d6a0.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/header.d76f31585bc54459a81724760a72d6a0.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/header.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/header.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/index.4f1634dad39fa990050fb978a342b179.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/index.4f1634dad39fa990050fb978a342b179.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/index.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/index.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/index.d76f31585bc54459a81724760a72d6a0.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/index.d76f31585bc54459a81724760a72d6a0.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/index.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/index.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/login.4f1634dad39fa990050fb978a342b179.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/login.4f1634dad39fa990050fb978a342b179.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/login.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/login.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/login.d76f31585bc54459a81724760a72d6a0.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/login.d76f31585bc54459a81724760a72d6a0.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/login.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/login.f41ba1fe467080c0bea7bb5f3904787d.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/product-detail.4f1634dad39fa990050fb978a342b179.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/product-detail.4f1634dad39fa990050fb978a342b179.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/products-create.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/products-create.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/products-update.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/products-update.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/products.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/products.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/products.d76f31585bc54459a81724760a72d6a0.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/products.d76f31585bc54459a81724760a72d6a0.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/users-create.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/users-create.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/users-create.d76f31585bc54459a81724760a72d6a0.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/users-create.d76f31585bc54459a81724760a72d6a0.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/users-update.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/users-update.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/users-update.d76f31585bc54459a81724760a72d6a0.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/users-update.d76f31585bc54459a81724760a72d6a0.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/users.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/users.d6198947eae7ecfc0d2fb8a5dde71300.rtpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cache/users.d76f31585bc54459a81724760a72d6a0.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/users.d76f31585bc54459a81724760a72d6a0.rtpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/cache/checkout.f65874fe9a12b67b4e80646e664d1028.rtpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cache/checkout.f65874fe9a12b67b4e80646e664d1028.rtpl.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/forgot-reset-success.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/forgot-reset-success.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/forgot-reset.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/forgot-reset.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/forgot-sent.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/forgot-sent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/forgot.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/forgot.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +53,7 @@
         <item name="@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="db_ecommerce: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="routines" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -211,7 +106,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@6f6450a9" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@79c94226" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -234,7 +129,8 @@
       <workItem from="1564344213066" duration="8187000" />
       <workItem from="1564541948549" duration="1763000" />
       <workItem from="1565057987643" duration="1946000" />
-      <workItem from="1575512026492" duration="4778000" />
+      <workItem from="1575512026492" duration="5209000" />
+      <workItem from="1575596184600" duration="7958000" />
     </task>
     <servers />
   </component>
@@ -269,10 +165,14 @@
       <screen x="70" y="240" width="1296" height="743" />
     </state>
     <state width="854" height="151" key="GridCell.Tab.0.right/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575512270006" />
-    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup" timestamp="1575513703448">
+    <state x="70" y="240" width="709" height="743" key="find.popup" timestamp="1575605086672">
       <screen x="70" y="240" width="1296" height="743" />
     </state>
-    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575513703448" />
+    <state x="70" y="240" width="709" height="743" key="find.popup/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575605086672" />
+    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup" timestamp="1575601187967">
+      <screen x="70" y="240" width="1296" height="743" />
+    </state>
+    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575601187967" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
