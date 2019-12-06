@@ -1,6 +1,6 @@
-./.ideia
+./.idea
 ./vendor/composer
 ./vendor/phpmailer
 ./vendor/rain
 ./vendor/slim
-./vendor/autoload
+./res
