@@ -2,26 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fec0642f-b2c2-47b1-bc12-df1efc2dbdae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/res/boletophp/boleto_itau.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/boletophp/imagens/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/boletophp/imagens/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/boletophp/imagens/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/boletophp/imagens/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/boletophp/imagens/b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/boletophp/imagens/imgbrrazu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/boletophp/imagens/imgbrrlrj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/boletophp/imagens/imgpxlazu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/boletophp/imagens/logoitau.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/boletophp/imagens/p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/boletophp/include/funcoes_itau.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/boletophp/include/layout_itau.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/OrderStatus.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cache/payment.f65874fe9a12b67b4e80646e664d1028.rtpl.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/payment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/cache/profile-orders-detail.f65874fe9a12b67b4e80646e664d1028.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/cache/profile-orders.f65874fe9a12b67b4e80646e664d1028.rtpl.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/profile-orders-detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/profile-orders.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/site.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Address.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/util/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,22 +121,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@75ab000f" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@71cb6630" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -172,7 +146,8 @@
       <workItem from="1575596184600" duration="8610000" />
       <workItem from="1575646999394" duration="1279000" />
       <workItem from="1575743196360" duration="731000" />
-      <workItem from="1575747845377" duration="5655000" />
+      <workItem from="1575747845377" duration="7177000" />
+      <workItem from="1575905757632" duration="1781000" />
     </task>
     <servers />
   </component>
@@ -195,39 +170,40 @@
       <screen x="70" y="240" width="1296" height="743" />
     </state>
     <state x="401" y="339" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575747832819" />
-    <state width="854" height="144" key="GridCell.Tab.0.bottom" timestamp="1575755138772">
+    <state width="854" height="144" key="GridCell.Tab.0.bottom" timestamp="1575762247096">
       <screen x="70" y="240" width="1296" height="743" />
     </state>
-    <state width="854" height="144" key="GridCell.Tab.0.bottom/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575755138772" />
+    <state width="854" height="144" key="GridCell.Tab.0.bottom/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575762247096" />
     <state width="854" height="151" key="GridCell.Tab.0.bottom/70.25.1296.743@70.25.1296.743" timestamp="1575647380756" />
-    <state width="854" height="144" key="GridCell.Tab.0.center" timestamp="1575755138772">
+    <state width="854" height="144" key="GridCell.Tab.0.center" timestamp="1575762247096">
       <screen x="70" y="240" width="1296" height="743" />
     </state>
-    <state width="854" height="144" key="GridCell.Tab.0.center/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575755138772" />
+    <state width="854" height="144" key="GridCell.Tab.0.center/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575762247096" />
     <state width="854" height="151" key="GridCell.Tab.0.center/70.25.1296.743@70.25.1296.743" timestamp="1575647380756" />
-    <state width="854" height="144" key="GridCell.Tab.0.left" timestamp="1575755138771">
+    <state width="854" height="144" key="GridCell.Tab.0.left" timestamp="1575762247095">
       <screen x="70" y="240" width="1296" height="743" />
     </state>
-    <state width="854" height="144" key="GridCell.Tab.0.left/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575755138771" />
+    <state width="854" height="144" key="GridCell.Tab.0.left/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575762247095" />
     <state width="854" height="151" key="GridCell.Tab.0.left/70.25.1296.743@70.25.1296.743" timestamp="1575647380755" />
-    <state width="854" height="144" key="GridCell.Tab.0.right" timestamp="1575755138772">
+    <state width="854" height="144" key="GridCell.Tab.0.right" timestamp="1575762247096">
       <screen x="70" y="240" width="1296" height="743" />
     </state>
-    <state width="854" height="144" key="GridCell.Tab.0.right/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575755138772" />
+    <state width="854" height="144" key="GridCell.Tab.0.right/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575762247096" />
     <state width="854" height="151" key="GridCell.Tab.0.right/70.25.1296.743@70.25.1296.743" timestamp="1575647380756" />
     <state x="268" y="210" width="889" height="373" key="NewPhpClassDialog" timestamp="1575647617811">
       <screen x="70" y="25" width="1296" height="743" />
     </state>
     <state x="268" y="210" width="889" height="373" key="NewPhpClassDialog/70.25.1296.743@70.25.1296.743" timestamp="1575647617811" />
-    <state x="70" y="240" width="709" height="743" key="find.popup" timestamp="1575749930740">
-      <screen x="70" y="240" width="1296" height="743" />
+    <state x="70" y="25" width="709" height="743" key="find.popup" timestamp="1575907469901">
+      <screen x="70" y="25" width="1296" height="743" />
     </state>
     <state x="70" y="240" width="709" height="743" key="find.popup/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575749930740" />
-    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup" timestamp="1575755146700">
-      <screen x="70" y="240" width="1296" height="743" />
+    <state x="70" y="25" width="709" height="743" key="find.popup/70.25.1296.743@70.25.1296.743" timestamp="1575907469901" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1575907434931">
+      <screen x="70" y="25" width="1296" height="743" />
     </state>
     <state x="381" y="304" width="672" height="678" key="search.everywhere.popup/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575755146700" />
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.25.1296.743@70.25.1296.743" timestamp="1575647385692" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.25.1296.743@70.25.1296.743" timestamp="1575907434931" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
