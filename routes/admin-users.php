@@ -11,8 +11,6 @@ $app->get('/admin/users',function(){
 
     $page = $_GET['page']??1;
 
-	$pagination = User::getPage($page);
-
 	if($search != ''){
         $pagination = User::getPageSearch($search,$page);
     }else{
