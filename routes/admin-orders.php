@@ -87,10 +87,38 @@ $app->get("/admin/orders/:idorder",function (int $idorder){
 $app->get("/admin/orders",function (){
     User::verifyLogin(true);
 
+
+    $search = $_GET['search']??"";
+
+    $page = $_GET['page']??1;
+
+    if($search != ''){
+        $pagination = Order::getPageSearch($search,$page);
+    }else{
+        $pagination = Order::getPage($page);
+    }
+
+    $pages = array();
+
+    for ($i = 0; $i < $pagination['pages']; $i++){
+        array_push($pages, [
+            "href"=>"/admin/orders?".http_build_query(
+                    [
+                        "page"=>$i+1,
+                        "search"=>$search
+                    ]),
+            "text"=>$i+1
+        ]);
+    }
+
+
+
     $page = new PageAdmin();
 
     $page->setTpl("orders",[
-       "orders"=>Order::listAll()
+       "orders"=>$pagination['data'],
+        "search"=>$search,
+        "pages"=>$pages
     ]);
 
 });
