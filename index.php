@@ -19,6 +19,7 @@ require_once($_SERVER['DOCUMENT_ROOT']."/routes/admin.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/routes/admin-users.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/routes/admin-categories.php");
 require_once($_SERVER['DOCUMENT_ROOT']."/routes/admin-products.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/routes/admin-orders.php");
 
 $app->run();
 

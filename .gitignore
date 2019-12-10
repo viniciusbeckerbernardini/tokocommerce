@@ -4,3 +4,4 @@
 ./vendor/rain
 ./vendor/slim
 ./res
+view/cache
