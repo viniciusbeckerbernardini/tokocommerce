@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fec0642f-b2c2-47b1-bc12-df1efc2dbdae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/view/admin/users-password.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin-orders.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin-orders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/orders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin-users.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin-users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/site.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Address.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/checkout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +54,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="db_ecommerce: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="db_ecommerce: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="routines" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -109,7 +119,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@2c0ee3dc" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@349bbd3d" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -138,6 +148,7 @@
       <workItem from="1575743196360" duration="731000" />
       <workItem from="1575747845377" duration="7177000" />
       <workItem from="1575905757632" duration="1781000" />
+      <workItem from="1575992323824" duration="1496000" />
     </task>
     <servers />
   </component>
@@ -160,40 +171,40 @@
       <screen x="70" y="240" width="1296" height="743" />
     </state>
     <state x="401" y="339" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575747832819" />
-    <state width="854" height="144" key="GridCell.Tab.0.bottom" timestamp="1575948887377">
-      <screen x="70" y="240" width="1296" height="743" />
+    <state width="854" height="144" key="GridCell.Tab.0.bottom" timestamp="1575992850846">
+      <screen x="70" y="25" width="1296" height="743" />
     </state>
-    <state width="854" height="144" key="GridCell.Tab.0.bottom/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575948887377" />
-    <state width="854" height="151" key="GridCell.Tab.0.bottom/70.25.1296.743@70.25.1296.743" timestamp="1575647380756" />
-    <state width="854" height="144" key="GridCell.Tab.0.center" timestamp="1575948887377">
-      <screen x="70" y="240" width="1296" height="743" />
+    <state width="854" height="144" key="GridCell.Tab.0.bottom/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575950526033" />
+    <state width="854" height="144" key="GridCell.Tab.0.bottom/70.25.1296.743@70.25.1296.743" timestamp="1575992850846" />
+    <state width="854" height="144" key="GridCell.Tab.0.center" timestamp="1575992850844">
+      <screen x="70" y="25" width="1296" height="743" />
     </state>
-    <state width="854" height="144" key="GridCell.Tab.0.center/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575948887377" />
-    <state width="854" height="151" key="GridCell.Tab.0.center/70.25.1296.743@70.25.1296.743" timestamp="1575647380756" />
-    <state width="854" height="144" key="GridCell.Tab.0.left" timestamp="1575948887377">
-      <screen x="70" y="240" width="1296" height="743" />
+    <state width="854" height="144" key="GridCell.Tab.0.center/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575950526033" />
+    <state width="854" height="144" key="GridCell.Tab.0.center/70.25.1296.743@70.25.1296.743" timestamp="1575992850844" />
+    <state width="854" height="144" key="GridCell.Tab.0.left" timestamp="1575992850843">
+      <screen x="70" y="25" width="1296" height="743" />
     </state>
-    <state width="854" height="144" key="GridCell.Tab.0.left/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575948887377" />
-    <state width="854" height="151" key="GridCell.Tab.0.left/70.25.1296.743@70.25.1296.743" timestamp="1575647380755" />
-    <state width="854" height="144" key="GridCell.Tab.0.right" timestamp="1575948887377">
-      <screen x="70" y="240" width="1296" height="743" />
+    <state width="854" height="144" key="GridCell.Tab.0.left/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575950526033" />
+    <state width="854" height="144" key="GridCell.Tab.0.left/70.25.1296.743@70.25.1296.743" timestamp="1575992850843" />
+    <state width="854" height="144" key="GridCell.Tab.0.right" timestamp="1575992850845">
+      <screen x="70" y="25" width="1296" height="743" />
     </state>
-    <state width="854" height="144" key="GridCell.Tab.0.right/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575948887377" />
-    <state width="854" height="151" key="GridCell.Tab.0.right/70.25.1296.743@70.25.1296.743" timestamp="1575647380756" />
+    <state width="854" height="144" key="GridCell.Tab.0.right/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575950526033" />
+    <state width="854" height="144" key="GridCell.Tab.0.right/70.25.1296.743@70.25.1296.743" timestamp="1575992850845" />
     <state x="268" y="210" width="889" height="373" key="NewPhpClassDialog" timestamp="1575647617811">
       <screen x="70" y="25" width="1296" height="743" />
     </state>
     <state x="268" y="210" width="889" height="373" key="NewPhpClassDialog/70.25.1296.743@70.25.1296.743" timestamp="1575647617811" />
-    <state x="70" y="25" width="709" height="743" key="find.popup" timestamp="1575907469901">
+    <state x="70" y="25" width="709" height="743" key="find.popup" timestamp="1575992787832">
       <screen x="70" y="25" width="1296" height="743" />
     </state>
     <state x="70" y="240" width="709" height="743" key="find.popup/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575749930740" />
-    <state x="70" y="25" width="709" height="743" key="find.popup/70.25.1296.743@70.25.1296.743" timestamp="1575907469901" />
-    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup" timestamp="1575949362703">
-      <screen x="70" y="240" width="1296" height="743" />
+    <state x="70" y="25" width="709" height="743" key="find.popup/70.25.1296.743@70.25.1296.743" timestamp="1575992787832" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1575993746904">
+      <screen x="70" y="25" width="1296" height="743" />
     </state>
-    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575949362703" />
-    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.25.1296.743@70.25.1296.743" timestamp="1575907434931" />
+    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575950436295" />
+    <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.25.1296.743@70.25.1296.743" timestamp="1575993746904" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
