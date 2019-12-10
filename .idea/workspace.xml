@@ -4,10 +4,12 @@
     <list default="true" id="fec0642f-b2c2-47b1-bc12-df1efc2dbdae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/admin-categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin-categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin-users.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin-users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/categories-menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/categories-menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin-products.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin-products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/hcodebr/php-classes/src/Model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/admin/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/cache/index.4a470aaae13fb11fa94cef2655bceefa.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/cache/login.4a470aaae13fb11fa94cef2655bceefa.rtpl.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/cache/users.4a470aaae13fb11fa94cef2655bceefa.rtpl.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,21 +55,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="db_ecommerce: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="db_ecommerce: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="tb_addresses: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="db_ecommerce: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="routines" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -118,7 +105,22 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@2c0ee3dc" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@54fa657d" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -196,10 +198,10 @@
     </state>
     <state x="70" y="240" width="709" height="743" key="find.popup/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575749930740" />
     <state x="70" y="25" width="709" height="743" key="find.popup/70.25.1296.743@70.25.1296.743" timestamp="1575907469901" />
-    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup" timestamp="1575947020862">
+    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup" timestamp="1575948329777">
       <screen x="70" y="240" width="1296" height="743" />
     </state>
-    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575947020862" />
+    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575948329777" />
     <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.25.1296.743@70.25.1296.743" timestamp="1575907434931" />
   </component>
   <component name="XDebuggerManager">
