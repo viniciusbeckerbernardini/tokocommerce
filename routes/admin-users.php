@@ -6,9 +6,42 @@ use \Hcode\Model\User;
 
 $app->get('/admin/users',function(){
 	User::verifyLogin();
-	$users = User::listAll();
+
+	$search = $_GET['search']??"";
+
+    $page = $_GET['page']??1;
+
+	$pagination = User::getPage($page);
+
+	if($search != ''){
+        $pagination = User::getPageSearch($search,$page);
+    }else{
+        $pagination = User::getPage($page);
+    }
+
+
+	$pages = array();
+
+	for ($i = 0; $i < $pagination['pages']; $i++){
+	    array_push($pages, [
+	       "href"=>"/admin/users?".http_build_query(
+	           [
+	           "page"=>$i+1,
+               "search"=>$search
+               ]),
+           "text"=>$i+1
+        ]);
+    }
+
 	$page = new PageAdmin();
-	$page->setTpl("users",["users"=>$users]);
+
+	$page->setTpl("users",
+        [
+            "users"=>$pagination['data'],
+            "search"=>$search,
+            "pages"=>$pages
+        ]
+    );
 });
 
 $app->get('/admin/users/create',function(){
