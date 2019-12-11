@@ -1,10 +1,10 @@
 <?php 
 
-use \Hcode\Page;
 use \Hcode\PageAdmin;
 use \Hcode\Model\User;
 
 $app->post("/admin/users/:iduser/password", function($iduser){
+
     User::verifyLogin(false);
     if (!isset($_POST['despassword']) || $_POST['despassword']==='') {
         User::setMsgError("Preencha a nova senha.");
@@ -21,6 +21,7 @@ $app->post("/admin/users/:iduser/password", function($iduser){
         header("Location: /admin/users/$iduser/password");
         exit;
     }
+
     $user = new User();
     $user->get((int)$iduser);
     $user->setPassword(User::getPasswordHash($_POST['despassword']));
