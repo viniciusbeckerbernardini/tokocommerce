@@ -9,7 +9,7 @@
     {loop="$products"}
     <input name="itemId{$key+1}" type="hidden" value="{$value.idproduct}">
     <input name="itemDescription{$key+1}" type="hidden" value="{$value.desproduct}">
-    <input name="itemAmount{$key+1}" type="hidden" value="{$value.vltotal}">
+    <input name="itemAmount{$key+1}" type="hidden" value="{$value.vlprice}">
     <input name="itemQuantity{$key+1}" type="hidden" value="{$value.nrqtd}">
     <input name="itemWeight{$key+1}" type="hidden" value="{$value.vlweight*1000}">
     {/loop}

@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fec0642f-b2c2-47b1-bc12-df1efc2dbdae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/view/payment-pagseguro.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/payment-paypal.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin-categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin-categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin-users.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin-users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/site/img/logo-pagseguro.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/site/img/logo-pagseguro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/site/img/logo-paypal.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/site/img/logo-paypal.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/site.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/site.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/payment-pagseguro.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/payment-pagseguro.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +147,7 @@
       <workItem from="1575747845377" duration="7177000" />
       <workItem from="1575905757632" duration="1781000" />
       <workItem from="1575992323824" duration="1496000" />
-      <workItem from="1576020537550" duration="2657000" />
+      <workItem from="1576020537550" duration="3874000" />
     </task>
     <servers />
   </component>
@@ -197,10 +199,10 @@
     </state>
     <state x="70" y="240" width="709" height="743" key="find.popup/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1575749930740" />
     <state x="70" y="25" width="709" height="743" key="find.popup/70.25.1296.743@70.25.1296.743" timestamp="1575992787832" />
-    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup" timestamp="1576022594143">
+    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup" timestamp="1576025140915">
       <screen x="70" y="240" width="1296" height="743" />
     </state>
-    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1576022594143" />
+    <state x="381" y="304" width="672" height="678" key="search.everywhere.popup/70.240.1296.743/1366.0.1920.1080@70.240.1296.743" timestamp="1576025140915" />
     <state x="381" y="89" width="672" height="678" key="search.everywhere.popup/70.25.1296.743@70.25.1296.743" timestamp="1575993746904" />
   </component>
   <component name="XDebuggerManager">

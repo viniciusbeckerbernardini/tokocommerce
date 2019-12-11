@@ -68,10 +68,6 @@
 											<label class="" for="billing_state">Estado</label>
 											<input type="text" id="billing_state" name="desstate" placeholder="Estado" value="{$address.desstate}" class="input-text ">
 										</p>
-										<p id="billing_state_field" class="form-row form-row-first address-field validate-state" data-o_class="form-row form-row-first address-field validate-state">
-											<label class="" for="billing_state">País</label>
-											<input type="text" id="billing_state" name="descountry" placeholder="País" value="{$address.descountry}" class="input-text ">
-										</p>
 										<div class="clear"></div>
 										<h3 id="order_review_heading" style="margin-top:30px;">Detalhes do Pedido</h3>
 										<div id="order_review" style="position: relative;">
@@ -113,6 +109,13 @@
 													</tr>
 												</tfoot>
 											</table>
+											<p id="billing_state_field2" class="form-row form-row-first address-field validate-state" data-o_class="form-row form-row-first address-field validate-state">
+												<label class="" for="billing_state">Selecione o tipo de pagamento</label>
+												<select name="payment-method" id="payment-method">
+													<option value="1">Pagseguro</option>
+													<option value="2">Paypal</option>
+												</select>
+											</p>
 											<div id="payment">
 												<div class="form-row place-order">
 													<input type="submit" data-value="Place order" value="Continuar" id="place_order" name="woocommerce_checkout_place_order" class="button alt">
